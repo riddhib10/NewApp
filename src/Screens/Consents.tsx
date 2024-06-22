@@ -1,21 +1,55 @@
-import React,{useEffect} from 'react';
-import {View, Text } from 'react-native';
-import {signOut} from '../Services/GoogleAuth';
+import React, {useState} from 'react';
+import {View,Text, TouchableOpacity , StyleSheet} from 'react-native';
+import Approved from './Approved';
+import Requests from './Requests';
 
+function Consents(){
+const[selectedVal, setSelectedVal] = useState('Requests');
 
-function HomeTab() {
-useEffect(()=>{
-signOut();
-});
+const Select=(value)=>{
+setSelectedVal(value);
+};
 
-
-  return (
-    <View>
-      <Text>
-        CONSENTS
-      </Text>
+return(
+    <View style= {styles.layout}>
+    <View style={styles.container}>
+        <TouchableOpacity style={[styles.radioButton, selectedVal === 'Requests' && styles.selectedButton]}
+        onPress = {()=> Select('Requests') }>
+            <Text> Requests </Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.radioButton, selectedVal === 'Approved' && styles.selectedButton ]}
+        onPress = {()=> Select('Approved') }>
+           <Text> Approved </Text>
+        </TouchableOpacity>
     </View>
-  );
+    <View>
+        {(selectedVal == "Requests") ?
+        <Requests/> : <Approved/>
+        }
+    </View>
+    </View>
+);
+
 }
 
-export default HomeTab;
+const styles = StyleSheet.create({
+ container: {
+    padding: 15,
+    borderRadius: 5,
+    flexDirection: 'row',
+
+  },
+radioButton: {
+    paddingHorizontal: 57,
+    paddingVertical: 10,
+    borderRadius: 10,
+    alignItems: 'center',
+
+  },
+selectedButton: {
+    backgroundColor: 'lightblue',
+},
+
+});
+
+export default Consents;
