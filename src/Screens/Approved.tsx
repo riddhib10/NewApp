@@ -27,7 +27,7 @@ function Approved() {
   }
 
  return(
-     <View style= {styles.layout}>
+     <View >
      <View style={styles.container}>
          <TouchableOpacity style={[styles.radioButton, selectedVal === 'Granted' && styles.selectedButton]}
          onPress = {()=> Select('Granted') }>
@@ -59,7 +59,7 @@ function Approved() {
      flexDirection: 'row',
    },
  radioButton: {
-     paddingHorizontal: 35,
+     paddingHorizontal: 27,
      paddingVertical: 5,
      borderRadius: 10,
      alignItems: 'center',

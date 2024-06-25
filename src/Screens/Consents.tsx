@@ -11,7 +11,7 @@ setSelectedVal(value);
 };
 
 return(
-    <View style= {styles.layout}>
+    <View >
     <View style={styles.container}>
         <TouchableOpacity style={[styles.radioButton, selectedVal === 'Requests' && styles.selectedButton]}
         onPress = {()=> Select('Requests') }>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 
   },
 radioButton: {
-    paddingHorizontal: 57,
+    paddingHorizontal: 52,
     paddingVertical: 10,
     borderRadius: 10,
     alignItems: 'center',

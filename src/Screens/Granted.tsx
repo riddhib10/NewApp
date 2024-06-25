@@ -18,7 +18,7 @@ function Granted() {
   return (
     <View>
       <FlatList
-        data={dummyData.dataRevoked}
+        data={dummyData.dataGranted}
         renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}
       />

@@ -69,7 +69,7 @@ function Requests() {
 
    },
  radioButton: {
-     paddingHorizontal: 25,
+     paddingHorizontal: 18,
      paddingVertical: 10,
      borderRadius: 10,
      alignItems: 'center',

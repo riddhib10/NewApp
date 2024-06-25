@@ -29,8 +29,7 @@ const TabNavigator = () => {
         style: {
           display: 'flex',
         },
-      }}
-    >
+      }}>
       <Tab.Screen name="HomeTab" component={HomeTab} />
       <Tab.Screen name="LinkedFacilities" component={LinkedFacilities} />
       <Tab.Screen name="Consents" component={Consents} />
