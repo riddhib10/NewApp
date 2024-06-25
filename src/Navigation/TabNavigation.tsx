@@ -25,7 +25,7 @@ const TabNavigator = () => {
       })}
       tabBarOptions={{
         activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
+        inactiveTintColor: 'black',
         style: {
           display: 'flex',
         },
